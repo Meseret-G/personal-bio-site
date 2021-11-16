@@ -1,18 +1,18 @@
 import React from 'react';
-import { Routes, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import AdminRoutes from './AdminRoutes';
+import PublicRoutes from './PublicRoutes';
 
-const index = ({ user }) => (
-  <div>
-    <Switch>
-      <Routes user={user} />
-    </Switch>
-  </div>
-);
+export default function Routes({ user }) {
+  return (
+    <div>
+      {user?.isAdmin && <AdminRoutes user={user} />}
+      <PublicRoutes user={user} />
+    </div>
+  );
+}
 
-index.propTypes = {
+Routes.propTypes = {
   user: PropTypes.shape(PropTypes.obj),
 };
-index.defaultProps = { user: null };
-
-export default index;
+Routes.defaultProps = { user: null };
