@@ -1,5 +1,6 @@
 import React from 'react';
+import './navbar.scss';
 
-export default function Navar() {
-  return <div>This in Navigation</div>;
+export default function Navbar() {
+  return <div className="nav">Navigation</div>;
 }

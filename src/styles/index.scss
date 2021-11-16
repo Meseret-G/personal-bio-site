@@ -1,6 +1,21 @@
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
-@import 'globals';
+// @import '~@fortawesome/fontawesome-free/css/all.min.css';
+// @import 'globals';
 
-body {
-  background-color: $favColor !important;
+// body {
+//   background-color: darkseagreen;
+// }
+
+.app {
+  height: 100%;
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    top: 70px;
+    scroll-
+    >* {
+      width: 100vw;
+      height: calc(100vh - 70px);
+    }
+  }
 }
