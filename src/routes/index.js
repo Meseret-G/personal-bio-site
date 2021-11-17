@@ -6,8 +6,8 @@ import PublicRoutes from './PublicRoutes';
 export default function Routes({ user }) {
   return (
     <div>
-      {user?.isAdmin && <AdminRoutes user={user} />}
-      <PublicRoutes user={user} />
+      {user?.isAdmin && <AdminRoutes />}
+      <PublicRoutes />
     </div>
   );
 }
