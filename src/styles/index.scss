@@ -1,9 +1,9 @@
 // @import '~@fortawesome/fontawesome-free/css/all.min.css';
 // @import 'globals';
 
-// body {
-//   background-color: darkseagreen;
-// }
+body {
+  background-color: darkseagreen;
+}
 
 .app {
   height: 100%;
@@ -18,4 +18,16 @@
       height: calc(100vh - 70px);
     }
   }
+}
+.nav {
+  
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-weight: bolder;
+    color: inherit;
+    text-decoration: none;
+    
+  
 }

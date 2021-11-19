@@ -7,7 +7,7 @@ export default function Routes({ user }) {
   return (
     <div>
       {user?.isAdmin && <AdminRoutes />}
-      <PublicRoutes />
+      <PublicRoutes user={user} />
     </div>
   );
 }
