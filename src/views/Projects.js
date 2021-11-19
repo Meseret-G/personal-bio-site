@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import getProjects from '../Helpers/ProjectData';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { getProjects } from '../Helpers/ProjectData';
 import ProjectCards from '../components/Projects/ProjectCards';
 
-export default function Projects() {
+export default function Projects({ user }) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -17,10 +19,22 @@ export default function Projects() {
   return (
     <div>
       <>
+        {user?.isAdmin && <Link to="/createProject"> Create Project </Link>}
         {projects.map((project) => (
-          <ProjectCards key={project.firebaseKey} project={project} />
+          <ProjectCards
+            key={project.firebaseKey}
+            project={project}
+            setProjects={setProjects}
+            user={user}
+          />
         ))}
       </>
     </div>
   );
 }
+Projects.propTypes = {
+  user: PropTypes.shape(PropTypes.obj),
+};
+Projects.defaultProps = {
+  user: null,
+};
