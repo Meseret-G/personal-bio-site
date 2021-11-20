@@ -1,37 +1,37 @@
 {
     "-Mofn9pmdeNToY2vAo8U": {
       "firebaseKey": "-Mofn9pmdeNToY2vAo8U",
-      "name": "Karena",
-      "description": "Golsworthy",
+      "name": "Team Roster",
+      "description": "Team Roster is a single page application with a complete CRUD.",
       "appUrl": "kgolsworthy0@dropbox.com",
       "githubUrl": "Genderfluid"
     },
     "-Mofn9pnXUucZ49Yhyim": {
       "firebaseKey":"-Mofn9pnXUucZ49Yhyim",
-      "name": "Bambi",
-      "description": "Klehn",
-      "appUrl": "bklehn1@nps.gov",
-      "githubUrl": "Polygender"
+      "name": "React Horder",
+      "description": "React Horder is a full CRUD single page application with dynamic routing ",
+      "appUrl": "https://squadjs-react-hoarder.netlify.app/",
+      "githubUrl": "https://github.com/nss-evening-cohort-16/react-horder-squad-js"
     },
     "-Mofn9poL78XTA_J2TZt": {
       "firebaseKey": "-Mofn9poL78XTA_J2TZt",
-      "name": "Eilis",
-      "description": "Jorat",
-      "appUrl": "ejorat2@sciencedaily.com",
+      "name": "Sorting Hat",
+      "description": "Sorting Hat",
+      "appUrl": "https://peaceful-neumann-4e225a.netlify.app/",
       "githubUrl": "Genderqueer"
     },
     "-Mofn9ppk0GhLqs4QvcO": {
       "firebaseKey": "-Mofn9ppk0GhLqs4QvcO",
-      "name": "Loydie",
-      "description": "Lowsely",
-      "appUrl": "llowsely3@washington.edu",
-      "githubUrl": "Polygender"
+      "name": "Joke Generator",
+      "description": "Joke Generator",
+      "appUrl": "https://jokegenerator-inclass.netlify.app/",
+      "githubUrl": "https://github.com/Meseret-G/sorting-hat"
     },
     "-Mofn9pqQF772OxGrCre": {
       "firebaseKey": "-Mofn9pqQF772OxGrCre",
-      "name": "Ilka",
-      "description": "Paling",
+      "name": "Placeholder",
+      "description": "Placeholder",
       "appUrl": "ipaling4@chron.com",
-      "githubUrl": "Genderqueer"
+      "githubUrl": "placeholder"
     }
   }
