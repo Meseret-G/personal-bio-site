@@ -8,7 +8,6 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  CardText,
 } from 'reactstrap';
 import { deleteProject } from '../../Helpers/ProjectData';
 
@@ -21,18 +20,16 @@ export default function ProjectCard({ project, user, setProjects }) {
   return (
     <div>
       <div>
-        <Card>
-          <CardBody>
-            <CardTitle tag="h5">{project.name}</CardTitle>
+        <Card className="projectcard">
+          <CardBody className="cardbody">
+            <CardTitle className="protitle" tag="h6">
+              {project.name}
+            </CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
               {project.description}
             </CardSubtitle>
           </CardBody>
           <CardBody>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the cards content.
-            </CardText>
             <CardLink href="#">{project.appUrl}</CardLink>
             <CardLink href="#">{project.githubUrl}</CardLink>
             {user?.isAdmin && (

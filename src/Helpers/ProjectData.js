@@ -43,10 +43,18 @@ const getSingleProject = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getAllTech = () => new Promise((resolve, reject) => {
+  axios
+    .get(`${dbUrl}/tech.json`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch(reject);
+});
+
 export {
   getProjects,
   deleteProject,
   createProject,
   updateProject,
   getSingleProject,
+  getAllTech,
 };

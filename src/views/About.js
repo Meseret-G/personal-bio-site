@@ -1,5 +1,10 @@
 import React from 'react';
+import About from '../components/About/About';
 
-export default function About() {
-  return <div>About Me</div>;
+export default function AboutPage() {
+  return (
+    <div>
+      <About />
+    </div>
+  );
 }

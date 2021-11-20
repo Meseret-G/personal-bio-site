@@ -1,43 +1,57 @@
-// import React from 'react';
-// import { NavItem, NavLink } from 'reactstrap';
-// import PropTypes from 'prop-types';
-// import { signOutUser, signInUser } from '../../api/auth';
+import React from 'react';
+import { Accordion } from 'react-bootstrap';
 
-// export default function Navbar({ user }) {
-//   return (
-//     <div className="nav">
-//       <NavItem>
-//         <NavLink href="/about">About</NavLink>
-//       </NavItem>
-//       <NavItem>
-//         <NavLink href="/projects">Projects</NavLink>
-//       </NavItem>
-//       <NavItem>
-//         <NavLink href="/technology">Technologies</NavLink>
-//       </NavItem>
-//       <NavItem>
-//         <NavLink href="/contact">Contact</NavLink>
-//       </NavItem>
-//       {user ? (
-//         <button
-//           onClick={signInUser}
-//           className="btn btn-primary"
-//           type="button"
-//         >
-//           Sign In
-//         </button>
-
-//       ) : (
-//         <button onClick={signOutUser} className="btn btn-primary" type="button">
-//           Sign Out
-//         </button>
-//       )}
-//     </div>
-//   );
-// }
-// Navbar.propTypes = {
-//   user: PropTypes.shape(PropTypes.obj),
-// };
-// Navbar.defaultProps = {
-//   user: null,
-// };
+export default function About() {
+  return (
+    <div>
+      <img
+        src="https://avatars.githubusercontent.com/u/86808221?s=400?u=18959c7406db1b54601ee821038c5b72b507de78?v=4"
+        className="img-fluid"
+        alt="headShot"
+      />
+      <div>
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Background</Accordion.Header>
+            <Accordion.Body>
+              Hi there!My name is Meseret Gebremariam. I have been working as a
+              business analyst in the healthcare IT industry for the last 5
+              years. Why did I joined Nashville Software school? I have always
+              been intrigued by how a website works. There are several
+              similarities between web development and business analysis. both
+              require a strong analytical and problem solving skill. I enjoy
+              learning and trying new things, and I hope to find my version of
+              success in the software engineering.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Why Software Development?</Accordion.Header>
+            <Accordion.Body>
+              Software development provides an opportunity for continuous
+              learning. The field is broad and encompasses various roles related
+              to both computer applications and systems. software developers
+              work in practically every industry, and I am confident that it
+              helps me to create a better career opportunity by maintaining my
+              personal passion in continuous education.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Contact Me!</Accordion.Header>
+            <Accordion.Body>
+              Email: negash4@gmail.com
+              <hr />
+              <a
+                href="https://github.com/Meseret-G?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+              <hr />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </div>
+    </div>
+  );
+}
