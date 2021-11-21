@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
-  CardLink,
-  Card,
-  Button,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
+  Card, Button, CardBody, CardTitle, CardSubtitle,
 } from 'reactstrap';
 import { deleteProject } from '../../Helpers/ProjectData';
 
@@ -19,25 +14,28 @@ export default function ProjectCard({ project, user, setProjects }) {
   };
   return (
     <div>
-      <div>
+      <div className="project-container">
         <Card className="projectcard">
           <CardBody className="cardbody">
-            <CardTitle className="protitle" tag="h6">
-              {project.name}
-            </CardTitle>
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
+            <CardTitle className="protitle">{project.name}</CardTitle>
+            <CardSubtitle className="mb-2 text-muted">
               {project.description}
             </CardSubtitle>
           </CardBody>
           <CardBody>
-            <CardLink href="#">{project.appUrl}</CardLink>
-            <CardLink href="#">{project.githubUrl}</CardLink>
+            <Button className="card-title" href={project.appUrl}>
+              {' '}
+              Deployed App
+            </Button>
+            <Button className="card-title" href={project.githubUrl}>
+              Code Base in Github{' '}
+            </Button>
             {user?.isAdmin && (
               <Link
                 className="btn btn-danger"
                 to={`/edit/${project.firebaseKey}`}
               >
-                Update Project
+                Edit
               </Link>
             )}
             {user?.isAdmin && (
@@ -46,7 +44,7 @@ export default function ProjectCard({ project, user, setProjects }) {
                 onClick={() => handleClick('delete')}
                 color="danger"
               >
-                Delete Project
+                Delete
               </Button>
             )}
           </CardBody>

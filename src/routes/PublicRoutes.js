@@ -10,7 +10,7 @@ import AboutPage from '../views/About';
 export default function PublicRoutes({ user }) {
   return (
     <Switch>
-      <Route exact path="/home" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/about" component={AboutPage} />
       <Route exact path="/technologies" component={TechnologiesPage} />
       <Route
