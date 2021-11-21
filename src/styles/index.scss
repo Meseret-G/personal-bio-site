@@ -23,6 +23,7 @@ body {
   
     padding: 10px;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     background-color: white;
     font-weight: bolder;
@@ -39,7 +40,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  background-color: darkslategray;
+  background-color: wheat;
   align-items: center;
   margin-top: 50px;
   padding: 8px;
@@ -49,13 +50,13 @@ body {
   display: inline-block;
   color:dodgerblue;
 
-  .cardbody{
-padding: 5px;
-margin-left: 10px ;
-width: 18rem;
-height: 18rem;
-background-color: teal;
-  }
+//   .cardbody{
+// padding: 5px;
+// margin-left: 10px ;d
+// width: 18rem;
+// height: 18rem;
+// background-color: gray;
+//   }
 
   .protitle{
     color: black;
@@ -63,5 +64,13 @@ background-color: teal;
     font-size: inherit;
     
   }
+  .cardbody{
+padding: 5px;
+height: 200px;
+  }
 
+}
+
+.project-container {
+  background-color: rgb(33, 37, 24);
 }

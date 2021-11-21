@@ -108,5 +108,6 @@ export default function AdminProjectForm({ project = {} }) {
 }
 
 AdminProjectForm.propTypes = {
-  project: PropTypes.shape({}).isRequired,
+  project: PropTypes.shape({}),
 };
+AdminProjectForm.defaultProps = { project: {} };
