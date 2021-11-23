@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import AdminProjectForm from '../components/AdminComponents/AdminProjectForm';
-import AdminEditProject from '../views/AdminEditProject';
+import AdminProject from '../views/AdminProject';
 
 const PrivateRoute = ({ component: Component, user, ...rest }) => {
   if (user === null) return user;
@@ -31,16 +31,15 @@ export default function AdminRoutes({ user }) {
       <Switch>
         <PrivateRoute
           exact
-          path="/createProject"
+          path="/edit/:key"
           user={user}
-          component={() => <AdminProjectForm obj={{}} user={user} />}
+          component={() => <AdminProject user={user} />}
         />
-
         <PrivateRoute
           exact
-          path="/editProjectView/:firebaseKey"
+          path="/createproject"
           user={user}
-          component={() => <AdminEditProject user={user} />}
+          component={() => <AdminProjectForm obj={{}} user={user} />}
         />
       </Switch>
     </div>

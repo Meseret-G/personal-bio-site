@@ -9,21 +9,20 @@ const initialState = {
   appUrl: '',
   githubUrl: '',
 };
-export default function AdminProjectForm({ project = {} }) {
+export default function AdminProjectForm({ obj = {} }) {
   const [formInput, setFormInput] = useState(initialState);
-  // const { firebaseKey } = useParams();
   const history = useHistory();
 
   useEffect(() => {
-    if (project.firebaseKey) {
+    if (obj.firebaseKey) {
       setFormInput({
-        name: project.name,
-        description: project.description,
-        appUrl: project.appUrl,
-        githubUrl: project.githubUrl,
+        name: obj.name,
+        description: obj.description,
+        appUrl: obj.appUrl,
+        githubUrl: obj.githubUrl,
       });
     }
-  }, [project]);
+  }, [obj]);
 
   const handleChange = (e) => {
     setFormInput((prevState) => ({
@@ -36,14 +35,14 @@ export default function AdminProjectForm({ project = {} }) {
   };
   const handleClick = (e) => {
     e.preventDefault();
-    if (project.firebaseKey) {
-      updateProject(project.firebaseKey, formInput).then(() => {
-        history.push('/editProjectView');
+    if (obj.firebaseKey) {
+      updateProject(obj.firebaseKey, formInput).then(() => {
+        history.push('/projects');
       });
     } else {
       createProject({ ...formInput }).then(() => {
         resetForm();
-        history.push('/editProjectView');
+        history.push('/projects');
       });
     }
   };
@@ -53,53 +52,52 @@ export default function AdminProjectForm({ project = {} }) {
         <div className="form-group">
           <label htmlFor="projectName">Project Name</label>
           <input
-            type="text"
-            name="name"
-            className="form-control"
-            id="project-name"
-            placeholder="Project Name"
+            onChange={(e) => handleChange(e)}
             value={formInput.name || ''}
-            onChange={handleChange}
+            type="text"
+            name="projectName"
+            className="form-control"
+            id="projectName"
+            placeholder="Project Name"
           />
         </div>
         <div className="form-group">
-          <label htmlFor="description">Project Description</label>
+          <label htmlFor="projectDescription">Project Description</label>
           <input
-            type="text"
-            name="description"
-            className="form-control"
-            id="description"
-            placeholder="Project Description"
+            onChange={(e) => handleChange(e)}
             value={formInput.description || ''}
-            onChange={handleChange}
+            type="text"
+            name="projectDescription"
+            className="form-control"
+            id="projectDescription"
+            placeholder="Project Description"
           />
         </div>
         <div className="form-group">
           <label htmlFor="projectAppUrl">Application Url</label>
           <input
+            onChange={(e) => handleChange(e)}
+            value={formInput.appUrl || ''}
             type="text"
-            name="appUrl"
+            name="projectAppUrl"
             className="form-control"
             id="projectAppUrl"
             placeholder="App Url"
-            value={formInput.appUrl || ''}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group">
           <label htmlFor="githubUrl">Github Url</label>
           <input
+            onChange={(e) => handleChange(e)}
+            value={formInput.githubUrl || ''}
             type="text"
             name="githubUrl"
             className="form-control"
             id="githubUrl"
             placeholder="Github Url"
-            value={formInput.githubUrl || ''}
-            onChange={handleChange}
           />
         </div>
         <button type="submit" className="btn btn-success">
-          {' '}
           Submit
         </button>
       </form>
@@ -108,6 +106,8 @@ export default function AdminProjectForm({ project = {} }) {
 }
 
 AdminProjectForm.propTypes = {
-  project: PropTypes.shape({}),
+  obj: PropTypes.shape({}),
 };
-AdminProjectForm.defaultProps = { project: {} };
+AdminProjectForm.defaultProps = {
+  obj: {},
+};

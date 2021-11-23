@@ -22,6 +22,9 @@ export default function Navbar({ user }) {
       <NavItem>
         <NavLink href="/contact">Contact</NavLink>
       </NavItem>
+      <NavItem>
+        <NavLink href="/email">Email Me</NavLink>
+      </NavItem>
       {user ? (
         <button onClick={signOutUser} className="btn btn-primary" type="button">
           Sign Out

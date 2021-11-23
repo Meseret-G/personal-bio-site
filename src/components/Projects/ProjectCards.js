@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {
   Card, Button, CardBody, CardTitle, CardSubtitle,
 } from 'reactstrap';
@@ -23,23 +23,24 @@ export default function ProjectCard({ project, user, setProjects }) {
             </CardSubtitle>
           </CardBody>
           <CardBody>
-            <Button className="card-title" href={project.appUrl}>
+            <Button className="deployed-button" href={project.appUrl}>
               {' '}
               Deployed App
             </Button>
-            <Button className="card-title" href={project.githubUrl}>
+            <Button className="github-button" href={project.githubUrl}>
               Code Base in Github{' '}
             </Button>
             {user?.isAdmin && (
-              <Link
-                className="btn btn-danger"
+              <Button
+                className="edit-project"
                 to={`/edit/${project.firebaseKey}`}
               >
                 Edit
-              </Link>
+              </Button>
             )}
             {user?.isAdmin && (
               <Button
+                className="delete-project"
                 type="button"
                 onClick={() => handleClick('delete')}
                 color="danger"
