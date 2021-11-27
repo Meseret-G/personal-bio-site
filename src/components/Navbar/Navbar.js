@@ -7,10 +7,7 @@ import { signInUser, signOutUser } from '../../api/auth';
 export default function Navbar({ user }) {
   return (
     <div className="nav">
-      <NavItem className="navitem">
-        <NavLink href="/">Home</NavLink>
-      </NavItem>
-      <NavItem>
+      <NavItem className="about-color">
         <NavLink href="/about">About</NavLink>
       </NavItem>
       <NavItem>
