@@ -6,16 +6,16 @@ import TechnologiesPage from '../views/Technologies';
 import Contact from '../views/Contact';
 import AboutPage from '../views/About';
 import Email from '../views/Email';
-import HomePage from '../views/Home';
+// import HomePage from '../views/Home';
 
 export default function PublicRoutes({ user }) {
   return (
     <Switch>
-      <Route exact path="/" component={HomePage} />
+      {/* <Route exact path="/" component={HomePage} /> */}
       <Route exact path="/about" component={AboutPage} />
       <Route exact path="/technologies" component={TechnologiesPage} />
       <Route
-        exact
+        // exact
         path="/projects"
         component={() => <Projects user={user} />}
       />

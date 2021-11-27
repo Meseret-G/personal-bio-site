@@ -4,7 +4,7 @@ import { ListGroup, Figure, Card } from 'react-bootstrap';
 export default function Contact() {
   return (
     <div className="contactPage">
-      <Card>
+      <Card className="contact-card">
         <ListGroup className="ListGroup">
           <ListGroup.Item className="contacticon">
             {' '}
@@ -19,6 +19,7 @@ export default function Contact() {
           </ListGroup.Item>
           <ListGroup.Item className="contacticon">
             <Figure.Image
+              className="image"
               width={180}
               height={180}
               alt="171x180"

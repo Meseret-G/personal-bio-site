@@ -4,17 +4,19 @@ import '../../styles/globals/index.scss';
 
 export default function About() {
   return (
-    <div>
+    <div className="landingpage">
       <img
         src="https://avatars.githubusercontent.com/u/86808221?s=400?u=18959c7406db1b54601ee821038c5b72b507de78?v=4"
         className="img-fluid"
         alt="headShot"
       />
-      <h1> Meseret Gebremariam, Frontend Developer </h1>
+      <h1 className="Maintitle"> Meseret Gebremariam, Frontend Developer </h1>
       <div>
         <Accordion className="aboutpage" defaultActiveKey="0">
           <Accordion.Item eventKey="0">
-            <Accordion.Header>Background</Accordion.Header>
+            <Accordion.Header className="backgroundtitle">
+              Background
+            </Accordion.Header>
             <Accordion.Body>
               Hi there!My name is Meseret Gebremariam. I have been working as a
               business analyst in the healthcare IT industry for the last 5
