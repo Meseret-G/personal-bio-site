@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   Card, Button, CardBody, CardTitle, CardSubtitle,
 } from 'reactstrap';
@@ -31,12 +31,12 @@ export default function ProjectCard({ project, user, setProjects }) {
               Code Base in Github{' '}
             </Button>
             {user?.isAdmin && (
-              <Button
+              <Link
                 className="edit-project"
                 to={`/edit/${project.firebaseKey}`}
               >
                 Edit
-              </Button>
+              </Link>
             )}
             {user?.isAdmin && (
               <Button

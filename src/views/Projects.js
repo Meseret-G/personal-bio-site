@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getProjects } from '../Helpers/ProjectData';
-import ProjectCards from '../components/Projects/ProjectCards';
+import ProjectCard from '../components/Projects/ProjectCard';
 
 export default function Projects({ user }) {
   const [projects, setProjects] = useState([]);
@@ -21,7 +21,7 @@ export default function Projects({ user }) {
       <>
         {user?.isAdmin && <Link to="/createproject"> Create Project </Link>}
         {projects.map((project) => (
-          <ProjectCards
+          <ProjectCard
             key={project.firebaseKey}
             project={project}
             setProjects={setProjects}
