@@ -41,53 +41,86 @@ body {
 
 // Project page styling 
 
-.projectcard {
-  // display: flex;
-  flex-wrap: flex-wrap;
-  padding: 5px !important;
-  margin-bottom: 10px !important;
+.projects {
+  background-color: black;
+ display: flex;
+ flex-wrap: wrap;
+ .project-card {
+   width: 350px;
+   height: 200px;
+   margin: auto;
+   object-fit: cover;
+   margin-bottom: 10px;
+   margin-top: 50px;
+   background-color:whitesmoke;
 
-  background-color: wheat;
-  align-items: center;
-  margin-top: 50px;
-  padding: 8px;
-  border-radius: 5px;
-  justify-content: center;
-  text-align: center;
-  display: inline-block;
-  color:dodgerblue;
+//    width: 340px;
+//    display: flex;
+//    margin-bottom: 10px;
+//    margin-top: 50px;
+//    background-color: black;
+//    display: flex;
+//    flex-wrap: wrap;
+//    flex-direction: row;
+//  justify-content: center;
+ 
+ .card-title {
+  color: black;
+   font-weight: bold;
+   align-items: center;
+   justify-content: center;
 
-  .protitle{
-    color: black;
-    font-weight: bold;
-    font-size: inherit;
+ }
+ .delete-project {
+   margin: 5px;
+   background: red;
+   border: 1px solid black;
+   border-radius: 40px;
+ }//  flex-direction: row;
+//  justify-content: center;
+
+
+//   background-color: wheat;
+//   align-items: center;
+//   margin-top: 50px;
+//   padding: 8px;
+//   border-radius: 5px;
+//   justify-content: center;
+//   text-align: center;
+//   display: inline-block;
+//   color:dodgerblue;
+
+//   .protitle{
+//     color: black;
+//     font-weight: bold;
+//     font-size: inherit;
     
-  }
-  .cardbody{
-padding: 5px;
-height: 200px;
-margin-left: 8px;
-margin-right: 8px;
-  }
+//   }
+//   .cardbody{
+// padding: 5px;
+// height: 200px;
+// margin-left: 8px;
+// margin-right: 8px;
+//   }
 
-  .deployed-button {
-    margin-right: 8px;
-  }
-  .github-button {
-    margin-right: 8px;
-  }
-  .edit-project {
-    margin-right: 8px;
-  }
+//   .deployed-button {
+//     margin-right: 8px;
+//   }
+//   .github-button {
+//     margin-right: 8px;
+//   }
+//   .edit-project {
+//     margin-right: 8px;
+//   }
 
-}
+// }
 
-.project-container {
-  background-color: rgb(33, 37, 24);
-  margin: 60px 15px;
-  box-shadow:cadetblue;
+// .project-container {
+//   background-color: rgb(33, 37, 24);
+//   margin: 60px 15px;
+//   box-shadow:cadetblue;
   
-}
+ }
 
 // About Page
 .landingpage {
@@ -163,5 +196,6 @@ border-color: black;
   flex-direction: row;
 justify-content: center;
 
+}
 }
 }
