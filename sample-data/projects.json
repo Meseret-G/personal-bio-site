@@ -2,7 +2,7 @@
     "-Mofn9pmdeNToY2vAo8U": {
       "firebaseKey": "-Mofn9pmdeNToY2vAo8U",
       "name": "Team Roster",
-      "description": "Team Roster is a single page application with a complete CRUD.",
+      "description": "Team Roster is a single page react application with a complete CRUD and user authentication using firebase. The app allows users to build their favorite sport team on their own",
       "appUrl": "kgolsworthy0@dropbox.com",
       "githubUrl": "Genderfluid"
     },
@@ -16,14 +16,14 @@
     "-Mofn9poL78XTA_J2TZt": {
       "firebaseKey": "-Mofn9poL78XTA_J2TZt",
       "name": "Sorting Hat",
-      "description": "Sorting Hat",
+      "description": "In this app, you can enter a student's name and , like Harry Potter's sorting hat, the student will be assigned a house randomly. You are also allowed to expel.",
       "appUrl": "https://peaceful-neumann-4e225a.netlify.app/",
       "githubUrl": "Genderqueer"
     },
     "-Mofn9ppk0GhLqs4QvcO": {
       "firebaseKey": "-Mofn9ppk0GhLqs4QvcO",
       "name": "Joke Generator",
-      "description":"This is a fun app that gives you a random joke.",
+      "description":"This is a fun app that gives you a random joke. In this project, I learned how to use external API and play around with it. It also gave me an opportunities to explore various functionalities and use of Postman.",
       "appUrl": "https://jokegenerator-inclass.netlify.app/",
       "githubUrl": "https://github.com/Meseret-G/sorting-hat"
     },

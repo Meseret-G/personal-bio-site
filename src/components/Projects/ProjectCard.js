@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import {
-  Card, Button, CardBody, CardTitle, CardSubtitle,
-} from 'reactstrap';
 import { deleteProject } from '../../Helpers/ProjectData';
 
 export default function ProjectCard({ project, user, setProjects }) {
@@ -13,44 +10,32 @@ export default function ProjectCard({ project, user, setProjects }) {
     }
   };
   return (
-    <div>
-      <div className="project-container">
-        <Card className="projectcard">
-          <CardBody className="cardbody">
-            <CardTitle className="protitle">{project.name}</CardTitle>
-            <CardSubtitle className="mb-2 text-muted">
-              {project.description}
-            </CardSubtitle>
-          </CardBody>
-          <CardBody>
-            <Button className="deployed-button" href={project.appUrl}>
-              {' '}
-              Deployed App
-            </Button>
-            <Button className="github-button" href={project.githubUrl}>
-              Code Base in Github{' '}
-            </Button>
-            {user?.isAdmin && (
-              <Link
-                className="edit-project"
-                to={`/edit/${project.firebaseKey}`}
-              >
-                Edit
-              </Link>
-            )}
-            {user?.isAdmin && (
-              <Button
-                className="delete-project"
-                type="button"
-                onClick={() => handleClick('delete')}
-                color="danger"
-              >
-                Delete
-              </Button>
-            )}
-          </CardBody>
-        </Card>
-      </div>
+    <div className="projects">
+      <card className="project-card">
+        <h6 className="card-title">{project.name}</h6>
+        <p className="card-text">{project.description}</p>
+        <a href={project.appUrl} className="appUrl">
+          Deployed Application
+        </a>
+        <a href={project.githubUrl} className="github">
+          Repository in Github
+        </a>
+        {user?.isAdmin && (
+          <Link className="edit-project" to={`/edit/${project.firebaseKey}`}>
+            Edit
+          </Link>
+        )}
+        {user?.isAdmin && (
+          <button
+            className="delete-project"
+            type="button"
+            onClick={() => handleClick('delete')}
+            color="danger"
+          >
+            Delete
+          </button>
+        )}
+      </card>
     </div>
   );
 }
