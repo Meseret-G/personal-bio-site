@@ -3,7 +3,7 @@ import EmailForm from '../components/Contact/EmailForm';
 
 export default function Email() {
   return (
-    <div>
+    <div className="email-page">
       <EmailForm />
     </div>
   );
