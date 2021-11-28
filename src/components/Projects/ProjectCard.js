@@ -14,14 +14,14 @@ export default function ProjectCard({ project, user, setProjects }) {
       <card className="project-card">
         <h6 className="card-title">{project.name}</h6>
         <p className="card-text">{project.description}</p>
-        <a href={project.appUrl} className="appUrl">
-          Deployed Application
+        <a href={project.appUrl} className="link">
+          Deployed App
         </a>
         <a href={project.githubUrl} className="github">
-          Repository in Github
+          Github
         </a>
         {user?.isAdmin && (
-          <Link className="edit-project" to={`/edit/${project.firebaseKey}`}>
+          <Link className="link" to={`/edit/${project.firebaseKey}`}>
             Edit
           </Link>
         )}
