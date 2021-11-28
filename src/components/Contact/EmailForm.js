@@ -24,44 +24,46 @@ export default function EmailForm() {
     e.target.reset();
   }
   return (
-    <div className="email">
-      <form onSubmit={sendEmail}>
-        <div className="row pt-5 mx-auto">
-          <div className="col-8 form-group mx-auto">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Your Name"
-              name="name"
-            />
+    <div className="emailme">
+      <div className="email">
+        <form className="emailform" onSubmit={sendEmail}>
+          <div className="row pt-5 mx-auto">
+            <div className="col-8 form-group mx-auto">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Your Name"
+                name="name"
+              />
+            </div>
+            <div className="col-8 form-group pt-2 mx-auto">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Subject"
+                name="subject"
+              />
+            </div>
+            <div className="col-8 form-group pt-2 mx-auto">
+              <textarea
+                className="form-control"
+                id=""
+                cols="30"
+                rows="8"
+                placeholder="your message"
+                name="message"
+              />
+            </div>
+            <div className="col-8 pt-3 mx-auto">
+              <input
+                type="submit"
+                className="btn btn-info"
+                value="Send Message"
+              />
+            </div>
           </div>
-          <div className="col-8 form-group pt-2 mx-auto">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Subject"
-              name="subject"
-            />
-          </div>
-          <div className="col-8 form-group pt-2 mx-auto">
-            <textarea
-              className="form-control"
-              id=""
-              cols="30"
-              rows="8"
-              placeholder="your message"
-              name="message"
-            />
-          </div>
-          <div className="col-8 pt-3 mx-auto">
-            <input
-              type="submit"
-              className="btn btn-info"
-              value="Send Message"
-            />
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

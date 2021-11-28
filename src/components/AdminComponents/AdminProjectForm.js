@@ -42,10 +42,9 @@ export default function AdminProjectForm({ obj = {} }) {
     }
   };
   return (
-    <div>
+    <div className="project-form">
       <form onSubmit={handleClick}>
         <div className="form-group">
-          <label htmlFor="projectName">Project Name</label>
           <input
             onChange={(e) => handleChange(e)}
             value={formInput.name || ''}
@@ -57,7 +56,6 @@ export default function AdminProjectForm({ obj = {} }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="projectDescription">Project Description</label>
           <input
             onChange={(e) => handleChange(e)}
             value={formInput.description || ''}
@@ -69,7 +67,6 @@ export default function AdminProjectForm({ obj = {} }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="projectAppUrl">Application Url</label>
           <input
             onChange={(e) => handleChange(e)}
             value={formInput.appUrl || ''}
@@ -81,7 +78,6 @@ export default function AdminProjectForm({ obj = {} }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="githubUrl">Github Url</label>
           <input
             onChange={(e) => handleChange(e)}
             value={formInput.githubUrl || ''}
