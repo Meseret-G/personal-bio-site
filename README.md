@@ -4,16 +4,9 @@
 
 [See Live Demo of this Template](https://react-template-21.netlify.app/)
 
-This template includes all the dependencies and set up needed for you to work within defined code standards and structure to get you up and running quickly.
 
-## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Other important tidbits](#other-important-tidbits)
-    - [React Dev Tools](#react-dev-tools)
-    - [Using axios](#using-axios)
-    - [Deploying on Netlify](#deploying-on-netlify)
-___
+# Description
+This is an application that any user can visit to learn about my ongoing jurney as a frontend web developer. The site had a navigation bar where users can go to access, 4 pages: About, Projects, Technologies, Contact, and Email Me. The site also has full CRUD on project component only for a users authenticated as an admin. 
 
 ## Get Started
 ### Use Template
