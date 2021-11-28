@@ -23,7 +23,7 @@
     "-Mofn9ppk0GhLqs4QvcO": {
       "firebaseKey": "-Mofn9ppk0GhLqs4QvcO",
       "name": "Joke Generator",
-      "description": "Joke Generator",
+      "description":"This is a fun app that gives you a random joke.",
       "appUrl": "https://jokegenerator-inclass.netlify.app/",
       "githubUrl": "https://github.com/Meseret-G/sorting-hat"
     },

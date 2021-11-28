@@ -15,12 +15,7 @@ export default function AdminProjectForm({ obj = {} }) {
 
   useEffect(() => {
     if (obj.firebaseKey) {
-      setFormInput({
-        name: obj.name,
-        description: obj.description,
-        appUrl: obj.appUrl,
-        githubUrl: obj.githubUrl,
-      });
+      setFormInput(obj);
     }
   }, [obj]);
 
@@ -36,7 +31,7 @@ export default function AdminProjectForm({ obj = {} }) {
   const handleClick = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updateProject(obj.firebaseKey, formInput).then(() => {
+      updateProject(formInput).then(() => {
         history.push('/projects');
       });
     } else {
@@ -55,7 +50,7 @@ export default function AdminProjectForm({ obj = {} }) {
             onChange={(e) => handleChange(e)}
             value={formInput.name || ''}
             type="text"
-            name="projectName"
+            name="name"
             className="form-control"
             id="projectName"
             placeholder="Project Name"
@@ -67,7 +62,7 @@ export default function AdminProjectForm({ obj = {} }) {
             onChange={(e) => handleChange(e)}
             value={formInput.description || ''}
             type="text"
-            name="projectDescription"
+            name="description"
             className="form-control"
             id="projectDescription"
             placeholder="Project Description"
@@ -79,7 +74,7 @@ export default function AdminProjectForm({ obj = {} }) {
             onChange={(e) => handleChange(e)}
             value={formInput.appUrl || ''}
             type="text"
-            name="projectAppUrl"
+            name="appUrl"
             className="form-control"
             id="projectAppUrl"
             placeholder="App Url"

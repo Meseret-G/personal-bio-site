@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getProjects } from '../../Helpers/ProjectData';
-import ProjectCard from '../Projects/ProjectCards';
+import ProjectCard from '../Projects/ProjectCard';
 
 export default function EditProjectView() {
   const [projects, setProjects] = useState([]);
